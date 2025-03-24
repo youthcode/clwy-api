@@ -5,6 +5,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const adminArticlesRouter = require('./routes/admin/articles');
 
 const app = express();
 
@@ -16,6 +17,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/admin/articles', adminArticlesRouter);
+
 
 // 设置监听端口
 // const port = process.env.PORT || 3000;
