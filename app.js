@@ -19,11 +19,4 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/articles', adminArticlesRouter);
 
-
-// 设置监听端口
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => {
-//     console.log(`Server running on http://localhost:${port}`);
-// });
-
 module.exports = app;
